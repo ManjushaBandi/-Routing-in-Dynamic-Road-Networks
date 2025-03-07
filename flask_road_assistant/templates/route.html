@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route</title>
+</head>
+<body>
+    <h1>Route from {{ source }} to {{ destination }}</h1>
+    <p>Current Location: {{ current_location }}</p>
+
+    {% if map_html %}
+        <h2>Map:</h2>
+        <div>{{ map_html|safe }}</div>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
